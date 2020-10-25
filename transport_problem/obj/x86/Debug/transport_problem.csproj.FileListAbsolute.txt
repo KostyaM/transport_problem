@@ -1,0 +1,9 @@
+/home/kocmuk/Projects/transport_problem/transport_problem/bin/Debug/transport_problem.exe
+/home/kocmuk/Projects/transport_problem/transport_problem/bin/Debug/transport_problem.pdb
+/home/kocmuk/Projects/transport_problem/transport_problem/bin/Debug/IronXL.dll
+/home/kocmuk/Projects/transport_problem/transport_problem/bin/Debug/IronXL.xml
+/home/kocmuk/Projects/transport_problem/transport_problem/obj/x86/Debug/transport_problem.csprojAssemblyReference.cache
+/home/kocmuk/Projects/transport_problem/transport_problem/obj/x86/Debug/transport_problem.csproj.CoreCompileInputs.cache
+/home/kocmuk/Projects/transport_problem/transport_problem/obj/x86/Debug/transport_problem.csproj.CopyComplete
+/home/kocmuk/Projects/transport_problem/transport_problem/obj/x86/Debug/transport_problem.exe
+/home/kocmuk/Projects/transport_problem/transport_problem/obj/x86/Debug/transport_problem.pdb
