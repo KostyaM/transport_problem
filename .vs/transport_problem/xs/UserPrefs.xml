@@ -1,26 +1,37 @@
 ﻿<Properties StartupConfiguration="{E5346E25-EDC3-4776-81ED-4E1E7397E251}|Default">
-  <MonoDevelop.Ide.ItemProperties.transport__problem FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="transport_problem/dependencies/DependenciesInject.cs">
+  <MonoDevelop.Ide.ItemProperties.transport__problem PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="transport_problem/Program.cs" Line="9" Column="13" />
+      <File FileName="transport_problem/Program.cs" Line="24" Column="39" />
       <File FileName="packages/IronXL.Excel.2020.9.1/readme.txt" Line="1" Column="1" />
       <File FileName="transport_problem/Properties/AssemblyInfo.cs" Line="1" Column="1" />
       <File FileName="transport_problem/input/excelDataInput/IronExcelDataInput.cs" Line="30" Column="10" />
       <File FileName="transport_problem/input/excelDataInput/ExcelDataInput.cs" Line="9" Column="37" />
       <File FileName="transport_problem/input/excelDataInput/model/CellAddress.cs" Line="9" Column="53" />
-      <File FileName="transport_problem/dependencies/DependenciesInject.cs" Line="6" Column="9" />
+      <File FileName="transport_problem/dependencies/DependenciesInject.cs" Line="24" Column="32" />
+      <File FileName="transport_problem/output/docOutput/DocOutput.cs" Line="12" Column="22" />
+      <File FileName="transport_problem/output/docOutput/docIO/DocIOOutput.cs" Line="37" Column="40" />
+      <File FileName="transport_problem/packages.config" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="transport_problem" expanded="True">
             <Node name="transport_problem" expanded="True">
-              <Node name="dependencies" expanded="True">
-                <Node name="DependenciesInject.cs" selected="True" />
+              <Node name="dependencies" expanded="True" />
+              <Node name="output" expanded="True">
+                <Node name="docOutput" expanded="True">
+                  <Node name="docIO" expanded="True">
+                    <Node name="DocIOOutput.cs" selected="True" />
+                  </Node>
+                </Node>
               </Node>
             </Node>
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

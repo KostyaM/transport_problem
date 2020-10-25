@@ -41,6 +41,18 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="Syncfusion.Compression.Base">
+      <HintPath>..\packages\Syncfusion.Compression.Base.18.3.0.42\lib\net46\Syncfusion.Compression.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing">
+      <HintPath>..\packages\Syncfusion.Licensing.18.3.0.42\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.OfficeChart.Base">
+      <HintPath>..\packages\Syncfusion.OfficeChart.Base.18.3.0.42\lib\net46\Syncfusion.OfficeChart.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.DocIO.Base">
+      <HintPath>..\packages\Syncfusion.DocIO.Wpf.18.3.0.42\lib\net46\Syncfusion.DocIO.Base.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -49,6 +61,8 @@
     <Compile Include="input\excelDataInput\ExcelDataInput.cs" />
     <Compile Include="input\excelDataInput\model\CellAddress.cs" />
     <Compile Include="dependencies\DependenciesInject.cs" />
+    <Compile Include="output\docOutput\DocOutput.cs" />
+    <Compile Include="output\docOutput\docIO\DocIOOutput.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -58,6 +72,10 @@
     <Folder Include="input\excelDataInput\" />
     <Folder Include="input\excelDataInput\model\" />
     <Folder Include="dependencies\" />
+    <Folder Include="output\" />
+    <Folder Include="output\docOutput\" />
+    <Folder Include="output\consoleOutput\" />
+    <Folder Include="output\docOutput\docIO\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
