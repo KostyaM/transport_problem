@@ -63,6 +63,12 @@
     <Compile Include="dependencies\DependenciesInject.cs" />
     <Compile Include="output\docOutput\DocOutput.cs" />
     <Compile Include="output\docOutput\docIO\DocIOOutput.cs" />
+    <Compile Include="model\ProblemTable.cs" />
+    <Compile Include="exceptions\Exceptions.cs" />
+    <Compile Include="domain\ITransportProblem.cs" />
+    <Compile Include="domain\PolarTransportProblemResolver.cs" />
+    <Compile Include="model\ResolvedTable.cs" />
+    <Compile Include="model\PrettyResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -76,6 +82,9 @@
     <Folder Include="output\docOutput\" />
     <Folder Include="output\consoleOutput\" />
     <Folder Include="output\docOutput\docIO\" />
+    <Folder Include="domain\" />
+    <Folder Include="model\" />
+    <Folder Include="exceptions\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
