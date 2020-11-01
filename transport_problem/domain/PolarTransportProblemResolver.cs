@@ -1,10 +1,14 @@
 ﻿using System;
+using transport_problem.model;
+
 namespace transport_problem.domain
 {
-    public class PolarTransportProblemResolver
+    public class PolarTransportProblemResolver: ITransportProblem
     {
-        public PolarTransportProblemResolver()
+
+        public int[][] calculate(ProblemTable problemTable)
         {
+            return 0;
         }
     }
 }
