@@ -3,11 +3,12 @@ using transport_problem.exceptions;
 
 namespace transport_problem.model
 {
-    public class ResolvedTable
+    public class 
+    ResolvedTable
     {
-        ResolvedDataSell[,] consumed;
-        readonly ResolvedConsumer[] consumers;
-        readonly ResolvedWarehouse[] warehouses;
+        public ResolvedDataCell[,] consumed;
+        public readonly ResolvedConsumer[] consumers;
+        public readonly ResolvedWarehouse[] warehouses;
 
         /*
         public ResolvedTable(int[] consumers, int[] warehouses)
@@ -20,13 +21,35 @@ namespace transport_problem.model
             for (int i = 0; i < this.warehouses.Length; i++)
                 this.warehouses[i] = new ResolvedWarehouse(warehouses[i]);
         }*/
+        public bool isResolved() {
+            bool wareHousesResolved = true;
+            bool consumersResolved = true;
+            foreach (ResolvedWarehouse warehouse in warehouses) {
+                if (warehouse.getTotal() != 0)
+                {
+                    wareHousesResolved = false;
+                    break;
+                }
+            }
+
+            foreach (ResolvedConsumer consumer in consumers)
+            {
+                if (consumer.getRequired() != 0)
+                {
+                    consumersResolved = false;
+                    break;
+                }
+            }
+            // Если товар закончился на складах, либо потребителю больше не нужно (В задачах закрытого типа данной проблемы наблюдаться не будет)
+            return wareHousesResolved || consumersResolved;
+        }
 
         public ResolvedTable(ProblemTable problemTable) {
 
-            consumed = new ResolvedDataSell[problemTable.prices.GetLength(0), problemTable.prices.GetLength(1)];
+            consumed = new ResolvedDataCell[problemTable.prices.GetLength(0), problemTable.prices.GetLength(1)];
             for(int i = 0; i < problemTable.prices.GetLength(0); i++) { 
                 for(int j = 0; j < problemTable.prices.GetLength(1); j ++) {
-                    consumed[i, j] = new ResolvedDataSell(problemTable.prices[i, j]);
+                    consumed[i, j] = new ResolvedDataCell(problemTable.prices[i, j]);
                 }
             }
             this.consumers = new ResolvedConsumer[problemTable.consumers.Length];
@@ -51,34 +74,34 @@ namespace transport_problem.model
         public PrettyResult toPrettyResult() {
             PrettyResultCell[,] resultTable = new PrettyResultCell[this.warehouses.Length + 4, this.consumers.Length + 2];
             //Рисуем легенду и результаты
-            for (int i = 1; i < resultTable.GetLength(1) - 2; i++) {
-                resultTable[0, i] = new PrettyResultCell($"Потребитель {i}", SellType.HEADER);
+            for (int i = 1; i < resultTable.GetLength(1) - 1; i++) {
+                resultTable[0, i] = new PrettyResultCell($"Потребитель {i}", CellType.HEADER);
                 ResolvedConsumer consumer = consumers[i - 1];
-                SellType consumerSellType = SellType.SUCCESS;
+                CellType consumerSellType = CellType.SUCCESS;
                 if (!consumer.isSatisfied())
-                    consumerSellType = SellType.ERROR;
+                    consumerSellType = CellType.ERROR;
                 resultTable[resultTable.GetLength(0) - 3, i] = new PrettyResultCell($"{consumer.getDelivered()} / {consumer.getRequired()}", consumerSellType);
             }
 
 
             for(int i = 1; i < resultTable.GetLength(0) - 3; i++) {
-                resultTable[i, 0] = new PrettyResultCell($"Склад {i}", SellType.HEADER);
+                resultTable[i, 0] = new PrettyResultCell($"Склад {i}", CellType.HEADER);
                 ResolvedWarehouse warehouse = warehouses[i - 1];
-                resultTable[i, resultTable.GetLength(1) - 1] = new PrettyResultCell($"{warehouse.getUsed()} / {warehouse.getTotal()}", SellType.HEADER);
+                resultTable[i, resultTable.GetLength(1) - 1] = new PrettyResultCell($"{warehouse.getUsed()} / {warehouse.getTotal()}", CellType.HEADER);
             }
 
             //Заполняем данные
             double sum = 0;
             for (int i = 1; i < resultTable.GetLength(0) - 3; i++) { 
-                for(int j = 1; j < resultTable.GetLength(1) - 2; j++) {
-                    resultTable[i, j] = new PrettyResultCell($"{consumed[i - 1, j - 1].getUsage()} / {consumed[i - 1, j - 1].getPrice()}", SellType.DATA);
+                for(int j = 1; j < resultTable.GetLength(1) - 1; j++) {
+                    resultTable[i, j] = new PrettyResultCell($"{consumed[i - 1, j - 1].getUsage()} / {consumed[i - 1, j - 1].getPrice()}", CellType.DATA);
                     sum += consumed[i - 1, j - 1].getUsagePrice();
                 }
             }
 
             //Указываем общую стоимость 
-            resultTable[resultTable.GetLength(0) - 1, 0] = new PrettyResultCell("ИТОГО: ", SellType.TOTAL);
-            resultTable[resultTable.GetLength(0) - 1, 1] = new PrettyResultCell($"{sum}", SellType.TOTAL);
+            resultTable[resultTable.GetLength(0) - 1, 0] = new PrettyResultCell("ИТОГО: ", CellType.TOTAL);
+            resultTable[resultTable.GetLength(0) - 1, 1] = new PrettyResultCell($"{sum}", CellType.TOTAL);
 
             return new PrettyResult(resultTable);
 
@@ -149,11 +172,11 @@ namespace transport_problem.model
         }
     }
 
-    public class ResolvedDataSell {
+    public class ResolvedDataCell {
         private readonly double price;
         private int usage = 0;
 
-        public ResolvedDataSell(double price) {
+        public ResolvedDataCell(double price) {
             this.price = price;
         }
 

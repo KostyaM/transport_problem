@@ -1,34 +1,44 @@
 ﻿<Properties StartupConfiguration="{E5346E25-EDC3-4776-81ED-4E1E7397E251}|Default">
   <MonoDevelop.Ide.ItemProperties.transport__problem PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="transport_problem/model/PrettyResult.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="transport_problem/domain/PolarTransportProblemResolver.cs">
     <Files>
-      <File FileName="transport_problem/Program.cs" Line="24" Column="39" />
-      <File FileName="packages/IronXL.Excel.2020.9.1/readme.txt" Line="1" Column="1" />
+      <File FileName="transport_problem/Program.cs" Line="28" Column="26" />
       <File FileName="transport_problem/Properties/AssemblyInfo.cs" Line="1" Column="1" />
-      <File FileName="transport_problem/input/excelDataInput/IronExcelDataInput.cs" Line="30" Column="10" />
-      <File FileName="transport_problem/input/excelDataInput/ExcelDataInput.cs" Line="9" Column="37" />
+      <File FileName="transport_problem/input/excelDataInput/IronExcelDataInput.cs" Line="13" Column="40" />
+      <File FileName="transport_problem/input/excelDataInput/ExcelDataInput.cs" Line="8" Column="1" />
       <File FileName="transport_problem/input/excelDataInput/model/CellAddress.cs" Line="9" Column="53" />
       <File FileName="transport_problem/dependencies/DependenciesInject.cs" Line="24" Column="32" />
       <File FileName="transport_problem/output/docOutput/DocOutput.cs" Line="12" Column="22" />
       <File FileName="transport_problem/output/docOutput/docIO/DocIOOutput.cs" Line="1" Column="1" />
       <File FileName="transport_problem/packages.config" Line="1" Column="1" />
-      <File FileName="transport_problem/model/ProblemTable.cs" Line="28" Column="111" />
-      <File FileName="transport_problem/exceptions/Exceptions.cs" Line="12" Column="1" />
-      <File FileName="transport_problem/domain/ITransportProblem.cs" Line="6" Column="39" />
-      <File FileName="transport_problem/domain/PolarTransportProblemResolver.cs" Line="11" Column="13" />
-      <File FileName="transport_problem/model/ResolvedTable.cs" Line="26" Column="10" />
-      <File FileName="transport_problem/model/PrettyResult.cs" Line="1" Column="1" />
+      <File FileName="transport_problem/model/ProblemTable.cs" Line="17" Column="36" />
+      <File FileName="transport_problem/exceptions/Exceptions.cs" Line="13" Column="29" />
+      <File FileName="transport_problem/domain/ITransportProblem.cs" Line="11" Column="1" />
+      <File FileName="transport_problem/domain/PolarTransportProblemResolver.cs" Line="33" Column="30" />
+      <File FileName="transport_problem/model/ResolvedTable.cs" Line="79" Column="61" />
+      <File FileName="transport_problem/model/PrettyResult.cs" Line="16" Column="36" />
+      <File FileName="transport_problem/model/CellAddress.cs" Line="3" Column="18" />
+      <File FileName="transport_problem/output/excellOutput/ExcelDataOutput.cs" Line="8" Column="14" />
+      <File FileName="transport_problem/output/excellOutput/IronExcelDataOutput.cs" Line="24" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="transport_problem" expanded="True">
             <Node name="transport_problem" expanded="True">
-              <Node name="domain" expanded="True" />
-              <Node name="exceptions" expanded="True" />
-              <Node name="model" expanded="True">
-                <Node name="PrettyResult.cs" selected="True" />
+              <Node name="dependencies" expanded="True" />
+              <Node name="domain" expanded="True">
+                <Node name="PolarTransportProblemResolver.cs" selected="True" />
               </Node>
+              <Node name="exceptions" expanded="True" />
+              <Node name="input" expanded="True">
+                <Node name="excelDataInput" expanded="True" />
+              </Node>
+              <Node name="model" expanded="True" />
+              <Node name="output" expanded="True">
+                <Node name="excellOutput" expanded="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
             </Node>
           </Node>
         </State>

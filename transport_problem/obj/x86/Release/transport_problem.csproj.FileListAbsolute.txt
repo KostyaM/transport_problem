@@ -1,0 +1,14 @@
+/home/kocmuk/Projects/transportproblemnet/transport_problem/bin/Release/transport_problem.exe
+/home/kocmuk/Projects/transportproblemnet/transport_problem/bin/Release/IronXL.dll
+/home/kocmuk/Projects/transportproblemnet/transport_problem/bin/Release/Syncfusion.Compression.Base.dll
+/home/kocmuk/Projects/transportproblemnet/transport_problem/bin/Release/Syncfusion.DocIO.Base.dll
+/home/kocmuk/Projects/transportproblemnet/transport_problem/bin/Release/Syncfusion.Licensing.dll
+/home/kocmuk/Projects/transportproblemnet/transport_problem/bin/Release/Syncfusion.OfficeChart.Base.dll
+/home/kocmuk/Projects/transportproblemnet/transport_problem/bin/Release/IronXL.xml
+/home/kocmuk/Projects/transportproblemnet/transport_problem/bin/Release/Syncfusion.Compression.Base.xml
+/home/kocmuk/Projects/transportproblemnet/transport_problem/bin/Release/Syncfusion.OfficeChart.Base.xml
+/home/kocmuk/Projects/transportproblemnet/transport_problem/bin/Release/Syncfusion.DocIO.Base.xml
+/home/kocmuk/Projects/transportproblemnet/transport_problem/obj/x86/Release/transport_problem.csprojAssemblyReference.cache
+/home/kocmuk/Projects/transportproblemnet/transport_problem/obj/x86/Release/transport_problem.csproj.CoreCompileInputs.cache
+/home/kocmuk/Projects/transportproblemnet/transport_problem/obj/x86/Release/transport_problem.csproj.CopyComplete
+/home/kocmuk/Projects/transportproblemnet/transport_problem/obj/x86/Release/transport_problem.exe

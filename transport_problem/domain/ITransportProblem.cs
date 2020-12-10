@@ -5,6 +5,6 @@ namespace transport_problem.domain
 {
     public interface ITransportProblem
     {
-        int[][] calculate(ProblemTable problemTable);
+        ResolvedTable calculate(ProblemTable problemTable);
     }
 }

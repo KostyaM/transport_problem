@@ -4,31 +4,26 @@ namespace transport_problem.model
 {
     public class ProblemTable
     {
-        readonly public int[,] prices;
+        readonly public double[,] prices;
         readonly public int[] warehouses;
         readonly public int[] consumers;
 
         public ProblemTable (
-                int[,] prices,
+                double[,] prices,
                 int[] warehouses,
                 int[] consumer
             )
         {
             if (prices.Length == 0)
                 throw new MalformedProblemTableException("Пустая ценовая таблица");
-            if (prices.Length != warehouses.Length)
+            if (prices.GetLength(0) != warehouses.Length)
                 throw new MalformedProblemTableException("Количество \"складов\" и размеры ценовой таблицы не совпадают");
 
-            int consumerLength = prices[0].Length;
+            int consumerLength = prices.GetLength(1);
             if (consumerLength == 0)
                 throw new MalformedProblemTableException("Пустая ценновая таблица");
 
-            foreach (int[] priceRow in prices) {
-                if (priceRow.Length != consumerLength)
-                    throw new MalformedProblemTableException("Введенные ценовые данные не являются таблицей");
-            }
-
-            if (prices.Length != consumerLength)
+            if (prices.GetLength(1) != consumerLength)
                 throw new MalformedProblemTableException("Количество \"потребителей\" и размеры ценовой таблицы не совпадают");
 
             this.prices = prices;
