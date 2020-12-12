@@ -60,7 +60,6 @@
     <Compile Include="input\excelDataInput\IronExcelDataInput.cs" />
     <Compile Include="input\excelDataInput\ExcelDataInput.cs" />
     <Compile Include="input\excelDataInput\model\CellAddress.cs" />
-    <Compile Include="dependencies\DependenciesInject.cs" />
     <Compile Include="output\docOutput\DocOutput.cs" />
     <Compile Include="output\docOutput\docIO\DocIOOutput.cs" />
     <Compile Include="model\ProblemTable.cs" />
@@ -83,7 +82,6 @@
     <Folder Include="input\" />
     <Folder Include="input\excelDataInput\" />
     <Folder Include="input\excelDataInput\model\" />
-    <Folder Include="dependencies\" />
     <Folder Include="output\" />
     <Folder Include="output\docOutput\" />
     <Folder Include="output\consoleOutput\" />

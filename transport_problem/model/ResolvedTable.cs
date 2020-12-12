@@ -3,8 +3,7 @@ using transport_problem.exceptions;
 
 namespace transport_problem.model
 {
-    public class 
-    ResolvedTable
+    public class ResolvedTable
     {
         public ResolvedDataCell[,] consumed;
         public readonly ResolvedConsumer[] consumers;

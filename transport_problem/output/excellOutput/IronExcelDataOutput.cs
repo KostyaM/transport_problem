@@ -5,9 +5,9 @@ namespace transport_problem.output.excellOutput
 {
     public class IronExcelDataOutput : ExcelDataOutput
     {
-        WorkBook wb;
-        WorkSheet workSheet;
-        string filePath;
+        private WorkBook wb;
+        private WorkSheet workSheet;
+        private string filePath;
 
         public IronExcelDataOutput(string filePath) {
             wb = WorkBook.Create();

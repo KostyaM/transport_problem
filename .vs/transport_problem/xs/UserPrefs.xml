@@ -1,25 +1,24 @@
 ﻿<Properties StartupConfiguration="{E5346E25-EDC3-4776-81ED-4E1E7397E251}|Default">
   <MonoDevelop.Ide.ItemProperties.transport__problem PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="transport_problem/output/excellOutput/IronExcelDataOutput.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="transport_problem/domain/PolarTransportProblemResolver.cs">
     <Files>
-      <File FileName="transport_problem/Program.cs" Line="23" Column="1" />
+      <File FileName="transport_problem/Program.cs" Line="21" Column="23" />
       <File FileName="transport_problem/Properties/AssemblyInfo.cs" Line="1" Column="1" />
       <File FileName="transport_problem/input/excelDataInput/IronExcelDataInput.cs" Line="48" Column="10" />
       <File FileName="transport_problem/input/excelDataInput/ExcelDataInput.cs" Line="17" Column="19" />
       <File FileName="transport_problem/input/excelDataInput/model/CellAddress.cs" Line="14" Column="35" />
-      <File FileName="transport_problem/dependencies/DependenciesInject.cs" Line="24" Column="32" />
       <File FileName="transport_problem/output/docOutput/DocOutput.cs" Line="12" Column="22" />
       <File FileName="transport_problem/output/docOutput/docIO/DocIOOutput.cs" Line="1" Column="1" />
       <File FileName="transport_problem/packages.config" Line="1" Column="1" />
-      <File FileName="transport_problem/model/ProblemTable.cs" Line="17" Column="36" />
+      <File FileName="transport_problem/model/ProblemTable.cs" Line="9" Column="40" />
       <File FileName="transport_problem/exceptions/Exceptions.cs" Line="13" Column="29" />
       <File FileName="transport_problem/domain/ITransportProblem.cs" Line="11" Column="1" />
       <File FileName="transport_problem/domain/PolarTransportProblemResolver.cs" Line="33" Column="30" />
-      <File FileName="transport_problem/model/ResolvedTable.cs" Line="79" Column="61" />
-      <File FileName="transport_problem/model/PrettyResult.cs" Line="16" Column="36" />
+      <File FileName="transport_problem/model/ResolvedTable.cs" Line="197" Column="38" />
+      <File FileName="transport_problem/model/PrettyResult.cs" Line="87" Column="96" />
       <File FileName="transport_problem/model/CellAddress.cs" Line="3" Column="18" />
       <File FileName="transport_problem/output/excellOutput/ExcelDataOutput.cs" Line="8" Column="14" />
-      <File FileName="transport_problem/output/excellOutput/IronExcelDataOutput.cs" Line="24" Column="1" />
+      <File FileName="transport_problem/output/excellOutput/IronExcelDataOutput.cs" Line="12" Column="51" />
       <File FileName="transport_problem/input/excelDataInput/model/CellRange.cs" Line="14" Column="31" />
       <File FileName="transport_problem/input/problemInput/IProblemInput.cs" Line="12" Column="1" />
       <File FileName="transport_problem/input/problemInput/ExcelSimpleProblemInput.cs" Line="20" Column="28" />
@@ -29,19 +28,9 @@
         <State name="__root__">
           <Node name="transport_problem" expanded="True">
             <Node name="transport_problem" expanded="True">
-              <Node name="dependencies" expanded="True" />
-              <Node name="domain" expanded="True" />
-              <Node name="exceptions" expanded="True" />
-              <Node name="input" expanded="True">
-                <Node name="problemInput" expanded="True" />
+              <Node name="domain" expanded="True">
+                <Node name="PolarTransportProblemResolver.cs" selected="True" />
               </Node>
-              <Node name="model" expanded="True" />
-              <Node name="output" expanded="True">
-                <Node name="excellOutput" expanded="True">
-                  <Node name="IronExcelDataOutput.cs" selected="True" />
-                </Node>
-              </Node>
-              <Node name="Properties" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -51,9 +40,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/home/kocmuk/Projects/transportproblemnet/transport_problem/Program.cs" relfile="transport_problem/Program.cs" line="20" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
