@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using IronXL;
 using transport_problem.input.excelDataInput;
 using transport_problem.input.excelDataInput.model;
@@ -38,18 +39,33 @@ namespace transport_problem.input
 
         public int readInt(CellAddress address)
         {
-            return sheet[address.toString()].IntValue;
+            return sheet[address.ToString()].IntValue;
         }
 
         public object readObject(CellAddress address)
         {
-            return sheet[address.toString()].Value;
+            return sheet[address.ToString()].Value;
+        }
+
+        public object[,] readRange(CellRange range)
+        {
+            var excelRange = sheet[range.ToString()].ToDataTable();
+            object[,] result = new object[excelRange.Rows.Count, excelRange.Columns.Count];
+            for(int i = 0; i < excelRange.Rows.Count; i++) {
+                DataRow row = excelRange.Rows[i];
+                for(int j = 0; j < excelRange.Columns.Count; j++) {
+                    result[i, j] = row[j];
+                }
+            }
+            return result;
         }
 
         public string readString(CellAddress address)
         {
-            return sheet[address.toString()].StringValue;
+            return sheet[address.ToString()].StringValue;
         }
+
+    
     }
 
 }

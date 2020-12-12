@@ -11,7 +11,8 @@ namespace transport_problem.input.excelDataInput.model
             this.row = row;
         }
 
-        public String toString() {
+        override public String ToString()
+        {
             return $"{column}{row}";
         }
     }

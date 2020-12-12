@@ -13,4 +13,6 @@ namespace transport_problem.exceptions
     public class InternalCalculationError: Exception { }
 
     public class InvalidValueSpecified: Exception { }
+
+    public class InvalidTableRangeInput: Exception { }
 }

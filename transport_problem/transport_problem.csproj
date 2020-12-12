@@ -72,6 +72,9 @@
     <Compile Include="model\CellAddress.cs" />
     <Compile Include="output\excellOutput\ExcelDataOutput.cs" />
     <Compile Include="output\excellOutput\IronExcelDataOutput.cs" />
+    <Compile Include="input\excelDataInput\model\CellRange.cs" />
+    <Compile Include="input\problemInput\IProblemInput.cs" />
+    <Compile Include="input\problemInput\ExcelSimpleProblemInput.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -89,6 +92,7 @@
     <Folder Include="model\" />
     <Folder Include="exceptions\" />
     <Folder Include="output\excellOutput\" />
+    <Folder Include="input\problemInput\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

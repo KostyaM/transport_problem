@@ -1,5 +1,4 @@
-﻿using System;
-using IronXL;
+﻿using IronXL;
 using transport_problem.model;
 
 namespace transport_problem.output.excellOutput
@@ -8,10 +7,12 @@ namespace transport_problem.output.excellOutput
     {
         WorkBook wb;
         WorkSheet workSheet;
+        string filePath;
 
-        public IronExcelDataOutput(String filePath, int sheetNumber) {
-            wb = WorkBook.Load(filePath);
-            workSheet = wb.WorkSheets[sheetNumber];
+        public IronExcelDataOutput(string filePath) {
+            wb = WorkBook.Create();
+            workSheet = wb.CreateWorkSheet("Решение задачи");
+            this.filePath = filePath;
         }
 
         public void writeResult(int startRow, PrettyResult prettyResult, OutputTheme theme)
@@ -26,7 +27,7 @@ namespace transport_problem.output.excellOutput
                     }
                 }
             }
-            wb.Save();
+            wb.SaveAs(filePath);
         }
     }
 }

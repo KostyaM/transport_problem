@@ -14,5 +14,6 @@ namespace transport_problem.input.excelDataInput
         int readInt(CellAddress address);
         String readString(CellAddress address);
         object readObject(CellAddress address);
+        object[,] readRange(CellRange range);
     };
 }
